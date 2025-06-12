@@ -1,0 +1,352 @@
+/* ProductPage.css */
+.product-page {
+  padding: 20px;
+margin: auto;
+
+}
+
+.product-page-container {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  align-items: center;
+  max-width: 70%;
+  
+}
+.promo-message {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.promo-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.promo-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.product-image-container {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-details {
+  margin-top: 55px;
+  width: 30%;
+  
+  align-self: flex-start;
+
+}
+
+.product-name {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: 	#CC4E36;
+  margin-bottom: 20px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1rem;
+  
+}
+
+.product-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+.payment-form {
+  font-size: 1.2rem;
+margin-left: 60px;
+width: 30%;
+
+
+}
+.payment-form label {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  
+}
+.zzz{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.zzz div{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.zzz input{
+  outline: none;
+}
+.zzz button{
+  margin: auto;
+  width: 100px;
+ background-color: 	#CC4E36;
+ border-radius: 8px;
+  
+   }
+
+.product-size,
+.product-quantity {
+  margin-bottom: 20px;
+}
+
+.product-size label,
+.product-quantity label {
+  font-size: 1.2rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+.product-size select,
+.product-quantity input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buy-now-button {
+  background-color: 	#CC4E36;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #fff;
+  color: 	#CC4E36;
+}
+
+.product-reviews {
+  width: 100%;
+  max-width: 800px;
+}
+
+.product-reviews h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.review {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star-icon {
+  color: #ffcc00;
+  margin-right: 5px;
+}
+
+.review-author {
+  font-size: 1.2rem;
+  color: #777;
+
+}
+
+.review-text {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+@media (max-width: 1176px) {
+  .product-page {
+    padding: 10px;
+    text-align: center;
+   
+  }
+  .product-details {
+
+    margin: auto;
+    width: 80%;
+    
+    
+  
+  }
+  .zzz button{
+    margin: auto;
+    width: 100px;
+   background-color:	#CC4E36;
+   border-radius: 8px;
+    
+     }
+  .payment-form {
+    font-size: 1.2rem;
+  margin-left: 0px;
+  width: 50%;
+  
+  
+  }
+  .product-page-container {
+    flex-direction: column;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .product-page {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .product-details {
+    width: 100%;
+  }
+
+  .product-reviews {
+    width: 100%;
+  }
+  .product-page-container{
+
+width: 100%;
+
+  }
+  .payment-form{
+   
+
+  width: 100%; 
+  }
+  .payment-form label{
+    font-size: 1.1rem;
+  margin-left: 0px;
+  width: 100%; 
+  }
+  .zzz{
+    width: 100%;
+    margin: auto;
+  }
+  .zzz div{
+  flex-direction: column;
+ 
+  }
+  .zzz h2{
+    font-size: 1.5rem;
+   
+    }
+  .zzz button{
+   margin: auto;
+   width: 100px;
+  background-color: 	#CC4E36;
+  border-radius: 8px;
+   
+    }
+  .eee{
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+/* Add styles for required field error messages */
+.required-error {
+  color: 	#CC4E36; /* Red color for error messages */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Add styles for the form */
+
+
+.payment-form input[type="text"],
+.payment-form input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.payment-form input[type="text"]:focus,
+.payment-form input[type="tel"]:focus {
+  border-color: 	#CC4E36;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+.eee[type="submit"] {
+  background-color: 	#CC4E36;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  margin-top: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.eee[type="submit"]:hover {
+  background-color: #fff;
+  color: 	#CC4E36;
+}
+.payment-form input{
+outline: none;
+}
+/* Add styles for the coupon code section */
+.coupon-code {
+  margin-bottom: 20px;
+  display: flex;
+
+}
+
+.coupon-code label {
+  font-size: 1.2rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+.coupon-code input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.coupon-code button {
+  background-color: 	#CC4E36;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  width: 150px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.coupon-code button:hover {
+  background-color: #fff;
+  color:	#CC4E36;
+}

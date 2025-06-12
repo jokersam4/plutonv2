@@ -1,0 +1,21 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.home-content {
+  padding: 20px;
+  text-align: center;
+}
