@@ -1,11 +1,17 @@
 /* src/App.css */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+ font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', sans-serif;
   background-color: #ffffff;
   color: #000000;
+
 }
 
+html, body, #root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
 a {
   text-decoration: none;

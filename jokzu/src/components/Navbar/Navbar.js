@@ -22,7 +22,7 @@ const Navbar = () => {
   const location = useLocation();
   const [userParam, setUserParam] = useState('');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 960);
-
+  const [userInfo, setUserInfo] = useState(null);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 960);
@@ -158,11 +158,14 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className="nav-item">
-            <Link to={`../affiliate/?user=${userParam}`} className="nav-links" onClick={toggleMenu}>
-              {language === 'en' ? "Affiliate" : language === 'fr' ? "Affiliation" : "التسويق"}
-            </Link>
-          </li>
+          {user?.codepromo && (
+            <li className="nav-item">
+              <Link to={`../affiliate/?user=${userParam}`} className="nav-links" onClick={toggleMenu}>
+                {language === 'en' ? "Affiliate" : language === 'fr' ? "Affiliation" : "التسويق"}
+              </Link>
+            </li>
+          )}
+
 
           <li className="nav-item user-item">
             {isMobile ? (

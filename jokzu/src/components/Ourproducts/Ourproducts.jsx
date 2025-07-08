@@ -46,7 +46,7 @@ const Ourproducts = () => {
           }))}
         />
       </div>
-         <Footer />
+  
          </div>
     </div>
   )

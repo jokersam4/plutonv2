@@ -378,7 +378,7 @@ const AffiliatePage = () => {
               </div>
             ) : (
               <div className="affiliate-intro">
-                <h1>{language === 'en' ? "Welcome to Pluton Affiliate" : language === 'fr' ? "Bienvenue chez Pluton Affiliation" : "مرحبًا بك في Pluton Affiliate"}</h1>
+                {/* <h1>{language === 'en' ? "Welcome to Pluton Affiliate" : language === 'fr' ? "Bienvenue chez Pluton Affiliation" : "مرحبًا بك في Pluton Affiliate"}</h1>
                 <p>
                   {language === 'en' ? "Create a promo code and earn " : language === 'fr' ? "Créez un code promo et gagnez " : "أنشئ رمزًا ترويجيًا واربح "}
                   <strong>50 MAD</strong> 
@@ -400,7 +400,7 @@ const AffiliatePage = () => {
                   <button onClick={addPromoCode} className="submit-btn">
                     {language === 'en' ? "Submit Promo Code" : language === 'fr' ? "Soumettre le code promo" : "إرسال رمز العرض الترويجي"}
                   </button>
-                </div>
+                </div> */}
               </div>
             )
           ) : (
@@ -413,7 +413,7 @@ const AffiliatePage = () => {
     </a>
           </div>}
         </div>
-        <Footer />
+    
       </div>
     );
     

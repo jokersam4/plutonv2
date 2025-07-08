@@ -24,6 +24,7 @@ import ThankYou from './components/ThankYou/ThankYou';
 import axios from "axios";
 import WhatsAppButton from './components/Whatsapp/WhatsAppButton';
 import Ourproducts from './components/Ourproducts/Ourproducts';
+import Footer from './components/Footer/Footer';
 
 // Set the base URL for all requests
 axios.defaults.baseURL = "http://localhost:5000";
@@ -45,7 +46,7 @@ const App = () => {
   const { user, dispatch, token, isLoggedIn, language } = useContext(AuthContext);
   const [clientSecret, setClientSecret] = useState("");
   const [currentRoute, setCurrentRoute] = useState(getCurrentRoute());
-
+  const [userInfo, setUserInfo] = useState(null);
   // Handle language selection
   const handleLanguageSelection = (lang) => {
     dispatch({ type: 'SET_LANGUAGE', payload: lang }); // Dispatch action to update language in context
@@ -133,10 +134,10 @@ const App = () => {
       price: 249,
       sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
       images: [product1Image1, product1Image2],
-      description: {
-        en: 'This is a cool 3D T-Shirt with a unique design. Made from high-quality materials to ensure comfort and style.',
-        fr: 'Ceci est un t-shirt 3D cool avec un design unique. Fabriqué avec des matériaux de haute qualité pour assurer confort et style.',
-        ar: 'هذا قميص ثلاثي الأبعاد بتصميم فريد. مصنوع من مواد عالية الجودة لضمان الراحة والأناقة.',
+  description: {
+        en: 'This 3D t-shirt features a unique and contemporary design. Entirely made in Morocco, it combines local craftsmanship with high-quality materials. Crafted from 100% polyester, this lightweight and durable garment provides optimal comfort throughout the day while ensuring lasting style and resilience..',
+        fr: 'Ce t-shirt 3D se distingue par un design unique et contemporain. Entièrement fabriqué au Maroc, il allie savoir-faire local et qualité supérieure. Confectionné à 100 % en polyester, ce vêtement léger et résistant offre un confort optimal tout au long de la journée, tout en assurant une excellente durabilité et un style affirmé.',
+        ar: 'هذا القميص ثلاثي الأبعاد يتميز بتصميم فريد ومعاصر. مصنوع بالكامل في المغرب، يجمع بين الحرفية المحلية والمواد عالية الجودة. مصنوع من البوليستر بنسبة 100%، هذا القطعة خفيفة الوزن ومتينة توفر راحة مثالية طوال اليوم مع ضمان أسلوب دائم وقوة تحمل عالية',
       },
       reviews: [
         {
@@ -168,9 +169,9 @@ const App = () => {
       sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
       images: [vegetaarmor],
       description: {
-        en: 'This is a cool 3D T-Shirt with a unique design. Made from high-quality materials to ensure comfort and style.',
-        fr: 'Ceci est un t-shirt 3D cool avec un design unique. Fabriqué avec des matériaux de haute qualité pour assurer confort et style.',
-        ar: 'هذا قميص ثلاثي الأبعاد بتصميم فريد. مصنوع من مواد عالية الجودة لضمان الراحة والأناقة.',
+        en: 'This 3D t-shirt features a unique and contemporary design. Entirely made in Morocco, it combines local craftsmanship with high-quality materials. Crafted from 100% polyester, this lightweight and durable garment provides optimal comfort throughout the day while ensuring lasting style and resilience..',
+        fr: 'Ce t-shirt 3D se distingue par un design unique et contemporain. Entièrement fabriqué au Maroc, il allie savoir-faire local et qualité supérieure. Confectionné à 100 % en polyester, ce vêtement léger et résistant offre un confort optimal tout au long de la journée, tout en assurant une excellente durabilité et un style affirmé.',
+        ar: 'هذا القميص ثلاثي الأبعاد يتميز بتصميم فريد ومعاصر. مصنوع بالكامل في المغرب، يجمع بين الحرفية المحلية والمواد عالية الجودة. مصنوع من البوليستر بنسبة 100%، هذا القطعة خفيفة الوزن ومتينة توفر راحة مثالية طوال اليوم مع ضمان أسلوب دائم وقوة تحمل عالية',
       },
       reviews: [
         {
@@ -203,6 +204,7 @@ const App = () => {
       <Navbar />
       <ScrollToTop />
       <WhatsAppButton />
+        
       <Routes>
         <Route
           path="/"
@@ -243,9 +245,13 @@ const App = () => {
         <Route path="/login" element={<AuthLayout />} />
         <Route path="/auth/reset-password/:token" element={<ResetLayout />} />
         <Route path="/api/auth/activate/:activation_token" element={<ActivateLayout />} />
-        <Route path="/Affiliate" element={<AffiliatePage />} />
+        {userInfo && userInfo.codepromo && (
+  <Route path="/Affiliate" element={<AffiliatePage />} />
+)}
+
         <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
+        <Footer className="footer" />
     </Router>
   );
 };

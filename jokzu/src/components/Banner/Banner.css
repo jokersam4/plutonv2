@@ -39,7 +39,7 @@
 .banner-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
+
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: slideInFromLeft 1s ease-in-out;
 }
@@ -47,7 +47,7 @@
 .banner-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
+
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   animation: slideInFromRight 1s ease-in-out;
 }
@@ -62,7 +62,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.3s ease, background 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+
   animation: fadeInUp 1.5s ease-in-out;
 }
 

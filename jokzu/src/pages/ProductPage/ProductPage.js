@@ -227,7 +227,7 @@ const ProductPage = ({ products }) => {
         </div>
         <Comments reviews={reviews} addReview={addReview} />
       </div>
-      <Footer />
+     
     </div>
   );
 };
